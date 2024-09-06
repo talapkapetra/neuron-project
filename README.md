@@ -119,17 +119,22 @@ A card visual was used to represent count of customers.
  
 ![Publish_Message](https://user-images.githubusercontent.com/102996550/174094520-3a845196-97e6-4d44-8760-34a64abc3e77.jpg)
 
-# Snapshot of Dashboard (Power BI Service)
+# Report Snapshot I (Power BI DESKTOP)
 
-![snapshot_dashboard_01](https://github.com/user-attachments/assets/68e03380-aed0-45a2-839d-bef3922da573)
-
+![snapshot_dashboard_01](https://github.com/user-attachments/assets/d200d407-7829-463b-b6f5-604ff5957458)
  
- # Report Snapshot (Power BI DESKTOP)
+ # Report Snapshot II (Power BI DESKTOP)
 
- 
-![Dashboard_upload](https://user-images.githubusercontent.com/102996550/174074051-4f08287a-0568-4fdf-8ac9-6762e0d8fa94.jpg)
+![snapshot_dashboard_02](https://github.com/user-attachments/assets/97fd2072-56b8-4ba0-9657-79927c526baa)
 
-# Insights
+# Report Snapshot III (Power BI DESKTOP)
+
+![snapshot_dashboard_03](https://github.com/user-attachments/assets/071bd8cb-5246-4a26-bd8e-35f45e2a5c03)
+
+# Dashboard Snapshot (Power BI Service)
+
+![snapshot_PBI_service](https://github.com/user-attachments/assets/e8b3fee0-ca1a-44e4-a369-3c00d293be53)
+
 
 A single page report was created on Power BI Desktop & it was then published to Power BI Service.
 
@@ -216,15 +221,6 @@ Average delay will change if different visual filters will be applied.
 
 ![Publish_Message](https://user-images.githubusercontent.com/102996550/174094520-3a845196-97e6-4d44-8760-34a64abc3e77.jpg)
 
-# Snapshot of Dashboard (Power BI Service)
-
-![dashboard_snapo](https://user-images.githubusercontent.com/102996550/174096257-11f1aae5-203d-44fc-bfca-25d37faf3237.jpg)
-
- 
- # Report Snapshot (Power BI DESKTOP)
-
- 
-![Dashboard_upload](https://user-images.githubusercontent.com/102996550/174074051-4f08287a-0568-4fdf-8ac9-6762e0d8fa94.jpg)
 
 # Insights
 
