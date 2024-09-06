@@ -213,3 +213,21 @@ Average delay will change if different visual filters will be applied.
 4.2) 30.94 % customers have travel type 'Personal'.
 
         thus, more customers have travel type 'Business'.
+
+![Publish_Message](https://user-images.githubusercontent.com/102996550/174094520-3a845196-97e6-4d44-8760-34a64abc3e77.jpg)
+
+# Snapshot of Dashboard (Power BI Service)
+
+![dashboard_snapo](https://user-images.githubusercontent.com/102996550/174096257-11f1aae5-203d-44fc-bfca-25d37faf3237.jpg)
+
+ 
+ # Report Snapshot (Power BI DESKTOP)
+
+ 
+![Dashboard_upload](https://user-images.githubusercontent.com/102996550/174074051-4f08287a-0568-4fdf-8ac9-6762e0d8fa94.jpg)
+
+# Insights
+
+A single page report was created on Power BI Desktop & it was then published to Power BI Service.
+
+Following inferences can be drawn from the dashboard;
