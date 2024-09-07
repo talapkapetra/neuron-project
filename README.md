@@ -20,6 +20,19 @@ We utilized these softwares to gain morphometric features of the terminals and s
  - PostgreSQL, DataGrip: creating database
  - PowerBI: data visualization
 
+## Abbreviations
+
+|ABBREVIATION|FULL NAME|
+|--------------------|----------------|
+|as|asymmetric synapse|
+|CB|calbidnin|
+|CR|calretinin|
+|den|dendrite|
+|exc|excitatory|
+|inh|inhibitory|
+|PV|parvalbumin|
+|ss|symmetric synapse|
+
 
 
 
