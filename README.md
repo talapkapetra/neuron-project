@@ -1,3 +1,30 @@
+#  Neuron Data Science Project
+
+## Project Overview
+
+For this neuroscience project I used my own dataset. Our aim was the complete morphometric analysis of dendrites and synapses of inhibitory neurons (mouse visual cortex). The neurons were identified by immunohistochemistry using markers of different types of calcium-binding proteins they contain (calbindin, calretinin, parvalbumin). The data collected from volume electron microscopy. 
+
+Briefly, ultrathin sections (50 nanometer) were made from histological brain samples and captured by a transmission electron microscope. Image stacks covering the dendrites and their axon terminals (synaptic boutons) were used for segmentation (outline) the structures on each single image and 3D structures were built from the stacks with the help of different software (FIJI, Reconstruct, Neurolucida, Blender).
+
+We utilized these softwares to gain morphometric features of the terminals and synapses at the micron and nano level: volume and surface area of the boutons, surface area (extent) of the synapses, distance of the synapses from the soma, synaptic vesicle data.
+
+## Objectives
+
+ - Organizing of the huge datasets and create a database which can be integrated into international storage systems.
+ - Statistical analysis of the effect of compression which could be observed due to the ultrathin sectioning. 
+ - Statistical analysis of the morphometric synaptic features. Are there any differences between markers as well as different synapse types (excitatory vs. inhibitory)
+
+## Tools:
+ - Excel: organizing and collecting of datasets
+ - Python, PyCharm: data cleaning, data preparation, exploratory data analysis, statistics
+ - PostgreSQL, DataGrip: creating database
+ - PowerBI: data visualization
+
+
+
+
+
+
 # Neuron project
 
 dataset: Own dataset, raw data.
