@@ -60,6 +60,97 @@ Representative image of all dendrites.**
 
 https://talapkapetra.github.io/neuron-project/calbindin_neuron_3D.html
 
+# Data Preparation
+
+## Preparation of csv files
+
+I had two excel files:
+-  neuron_dataset_shrinkage.xlsx
+
+- neuron_dataset_summary.xlsx
+
+neuron_dataset.ipynb
+
+## Transformation of csv files containing vesicle data
+
+neuron_dataset.ipynb
+
+Identification of boutons: b1, b2, b3…
+
+However, in case of vesicle datasets, one bouton had 10-30 data (rows). Therefore I had to introduce a new, unique labelling for each vesicles: b1_1, b1_2, b1_3, b2_1, b2_2…
+
+## Transformation CB_den1 and CB_den2 before vesicle csv files and calculation to determine the nearest neighbour distance
+
+For the statistical analysis of the effects of compression correction I needed data not only after but also before performing the compression corrections.
+
+When I got the dataset, I realised, that nearest neighbour distance calculations were missing for CB_den1 and CB_den2 before corrections. (For other groups, data were available in the excel files.) I figured out that my collegue made the calculation in excel with a formula counting the Manhattan and Euclidean distance for each vesciles. But it was not added to the excel files.
+
+- remove of NaN values
+- *X and Y and Z coordinates* : I transformed the numbers (string format, points etc.) and removed Z coordinates. Since measurements were made on images (on the 2D pane), Z value was always 0.
+- I created two new columns for the X and Y corrdinates (x_coord, y_coord)
+- Nearest neighbour distance measurement was performed in two steps in case of each vesicles:
+   - Firstly, *Manhattan distance* was calculated to determine which point is the closest to the current   point within the vesicle group of one synapse. Manhattan distance is simpler and computationally less expensive to calculate.
+   - Afterwards, *Euclidean Distance* was calculated to measure the actual spatial distance between the current point and the closest point. Euclidean distance provides a precise measure of the straight-line distance in 2D space.
+
+```python
+data = CB_den1_clean
+
+# Function to calculate Manhattan distance
+def manhattan_distance(point1, point2):
+    return abs(point1[0] - point2[0]) + abs(point1[1] - point2[1])
+
+# Function to calculate Euclidean distance
+def euclidean_distance(point1, point2):
+    return np.sqrt((point1[0] - point2[0])**2 + (point1[1] - point2[1])**2)
+
+# Initialize a list to store the results
+results = []
+
+# Loop through each bouton_number group
+for bouton_number, group in CB_den1_clean.groupby('bouton_number'):
+    for index, row in group.iterrows():
+        original_point = (row['x_coord'], row['y_coord'])
+        
+        # Calculate Manhattan distances to all other points in the group, excluding the original point
+        distances = group.apply(
+            lambda r: manhattan_distance(original_point, (r['x_coord'], r['y_coord'])) if r.name != index else np.inf, 
+            axis=1
+        )
+         # Identify the index of the closest point based on Manhattan distance
+        closest_point_index = distances.idxmin()
+        closest_point = (group.loc[closest_point_index, 'x_coord'], group.loc[closest_point_index, 'y_coord'])
+        
+        # Calculate the Euclidean distance between the original point and the closest point
+        euclidean_dist = euclidean_distance(original_point, closest_point)
+        
+        # Store the results
+        results.append({
+            'bouton_number': bouton_number,
+            'original_point': original_point,
+            'closest_point': closest_point,
+            'euclidean_distance': euclidean_dist
+        })
+
+# Convert results to a DataFrame
+CB_den1_clean_results_df = pd.DataFrame(results)
+
+# Display the results
+CB_den1_clean_results_df
+```
+
+- euclidean_distance column: contain data in micron
+
+- euclidean_distance_corr_nanometer column: I multipled the values in *euclidean_distance column* by 10. During the measurements in Neurolucida, original images were multipled with 100 beacause software could not handle datasets in the nanometer level. Therefore at this data processing step only multiple by 10 was needed for exchanging the values to the final nanometer.
+
+- Finally, I checked duplicates and transferred numeric data to float64 format.
+
+- Final cleaned datasets were exported to csv and Python codes of the full process stored:
+
+CB_den1_vesicle_before_shrink.ipynb
+
+CB_den1_vesicle_before_shrink.ipynb
+
+
 
 
 
