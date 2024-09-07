@@ -33,6 +33,30 @@ We utilized these softwares to gain morphometric features of the terminals and s
 |PV|parvalbumin|
 |ss|symmetric synapse|
 
+## Supplementary information
+I attached some representative figures and movie to make easier the overview of the project.
+1. Representative image made by a light microscope with three calbindin positive neurons
+![LM_figure](https://github.com/user-attachments/assets/a0f9b4a5-f9c0-4fbb-8c78-c0cec4f279f3)
+2. Representative images made by a transmission electron microscope (TEM) to present asymmetric and symmetric synapses. 
+
+Important to note, that that the expressions ’asymmetric’ and ’symmetric’ are used in neuroanatomy and corresponds to excitatory and inhbitory synapse types, respectively. I used *exc.* and *inh.* abbrevations in the visualtisations to make easier to interpret the results. However, in the main dataset, data were stored as *as* and *ss*.
+
+These TEM images were used to collect vesicle data: area, form factor, nearest neighbour distance.
+
+![EM_figure](https://github.com/user-attachments/assets/b6cd1fe4-ab25-4b15-90b4-bfc351a43e8c)
+
+The contour of vesicles located less than 50 nm from the active zones (~ surface of the chemical synaptic connections) were drawn using Neurolucida reconstruction system. That meant to be measured  approximately 10-30 vesicles / synapse. 
+In general, excitatory (asymmetric) synapses have vesicles approaching the regular circle, while inhibitory (symmetric) synapse vesicles are oval. *Exc.* vesicles located closer to each other than *inh.* vesciles. Therefore statistical analysis and comparison of the morphometric properties of the vesciles like area, form factor and nearest neighbour distance help in the characterization of synapses.
+
+I used Blender for final smoothing and editing the 3D reconstruction of the dendrites.
+Representative image of all dendrites.
+
+![3D_Blender_figure](https://github.com/user-attachments/assets/ad6d6c1f-5086-404c-a738-0185198f4e57)
+
+Movie of one calbindin-positive neuron and their two dendrites (den1 and den2)
+
+https://talapkapetra.github.io/neuron-project/calbindin_neuron_3D.html
+
 
 
 
