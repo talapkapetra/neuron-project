@@ -337,119 +337,218 @@ ss_dataset
 
 ![full_dataset_ss_shapiro](https://github.com/user-attachments/assets/9b372572-457d-47f7-b4c6-79aa7db8cf01)
 
+**Boxplots**
+Datasets were reorganised according to markers: calbindin_df, calretinin_df, parvalbumin_df
+
+Bouton
+
+Bouton morphometry was presented as surface area/ volume ratio.
+
+![bouton_ratio_summary_boxplot](https://github.com/user-attachments/assets/2404e704-9dac-4baa-a6af-6095e2745a9c)
+
+Synapse Surface Area
+
+![synapse_surface_summary_boxplot](https://github.com/user-attachments/assets/4f590ab7-1cb9-4993-9958-6f9004c3d6a5)
+
+**Histograms**
+
+Distribution of synapses along the dendrites
+
+full_dataset
+
+![synapse_full_histoplot](https://github.com/user-attachments/assets/ebe769a9-cc8c-4708-96ec-365f476f8979)
+
+as_dataset
+
+![synapse_as_histoplot](https://github.com/user-attachments/assets/b80d5419-e29c-4d63-8690-142503e9625e)
+
+ss_dataset
+
+![synapse_ss_histoplot](https://github.com/user-attachments/assets/7e6fdaa3-0d28-4be1-ac6a-9a0918947259)
+
+## Statistical anaylsis
+
+Mann-Whitney U test was performed to compare *as vs. ss* data.
+
+Newmanm-Keuls test (with Tukey) was performed to make pairweis comparisons between markers.
+
+Bouton Surface area / Volume ratio
+
+```
+### Mann-Whitney U Test Results (Within Markers) ###
+
+
+Analyzing marker: calbindin
+Mann-Whitney U Test Results for calbindin: U-statistic = 2267.0000, p-value = 1.7569e-01
+No significant difference found between as and ss for calbindin (p >= 0.05)
+
+Analyzing marker: calretinin
+Mann-Whitney U Test Results for calretinin: U-statistic = 1198.0000, p-value = 1.2078e-02
+Significant difference found between as and ss for calretinin (p < 0.05)
+
+Analyzing marker: parvalbumin
+Mann-Whitney U Test Results for parvalbumin: U-statistic = 21917.0000, p-value = 2.9933e-08
+Significant difference found between as and ss for parvalbumin (p < 0.05)
+
+### Newman-Keuls Test Results (Between Markers) ###
+
+ANOVA Table:
+                sum_sq     df          F        PR(>F)
+group      3019.233822    5.0  28.083728  3.667043e-26
+Residual  16362.763179  761.0        NaN           NaN
+Significant differences found, performing Newman-Keuls test...
+Multiple Comparison of Means - Tukey HSD, FWER=0.05         
+====================================================================
+    group1         group2     meandiff p-adj   lower   upper  reject
+--------------------------------------------------------------------
+  calbindin_as   calbindin_ss  -1.1893 0.7831 -3.7957  1.4171  False
+  calbindin_as  calretinin_as   2.5141 0.0009  0.7265  4.3017   True
+  calbindin_as  calretinin_ss  -0.2335    1.0 -3.6684  3.2015  False
+  calbindin_as parvalbumin_as   4.5251    0.0  3.1501  5.9002   True
+  calbindin_as parvalbumin_ss   1.3843 0.3337 -0.5769  3.3456  False
+  calbindin_ss  calretinin_as   3.7034  0.001  1.0503  6.3565   True
+  calbindin_ss  calretinin_ss   0.9559  0.983 -2.9992  4.9109  False
+  calbindin_ss parvalbumin_as   5.7144    0.0  3.3198  8.1091   True
+  calbindin_ss parvalbumin_ss   2.5737 0.0865 -0.1994  5.3467  False
+ calretinin_as  calretinin_ss  -2.7475 0.2112 -6.2181   0.723  False
+ calretinin_as parvalbumin_as    2.011 0.0013  0.5493  3.4727   True
+ calretinin_as parvalbumin_ss  -1.1297 0.6018 -3.1527  0.8932  False
+ calretinin_ss parvalbumin_as   4.7586 0.0005  1.4814  8.0357   True
+ calretinin_ss parvalbumin_ss   1.6178 0.7866 -1.9453  5.1809  False
+parvalbumin_as parvalbumin_ss  -3.1408    0.0 -4.8104 -1.4712   True
+--------------------------------------------------------------------
+```
+
+Synapse Surface Area
+
+```
+### Mann-Whitney U Test Results (Within Markers) ###
+
+
+Analyzing marker: calbindin
+Mann-Whitney U Test Results for calbindin: U-statistic = 2966.0000, p-value = 7.5350e-06
+Significant difference found between as and ss for calbindin (p < 0.05)
+
+Analyzing marker: calretinin
+Mann-Whitney U Test Results for calretinin: U-statistic = 1026.0000, p-value = 2.2872e-01
+No significant difference found between as and ss for calretinin (p >= 0.05)
+
+Analyzing marker: parvalbumin
+Mann-Whitney U Test Results for parvalbumin: U-statistic = 16858.0000, p-value = 2.7421e-01
+No significant difference found between as and ss for parvalbumin (p >= 0.05)
+
+### Newman-Keuls Test Results (Between Markers) ###
+
+ANOVA Table:
+            sum_sq     df          F        PR(>F)
+group     0.124609    5.0  24.655838  4.629918e-23
+Residual  0.769207  761.0        NaN           NaN
+Significant differences found, performing Newman-Keuls test...
+Multiple Comparison of Means - Tukey HSD, FWER=0.05         
+====================================================================
+    group1         group2     meandiff p-adj   lower   upper  reject
+--------------------------------------------------------------------
+  calbindin_as   calbindin_ss  -0.0374    0.0 -0.0553 -0.0195   True
+  calbindin_as  calretinin_as  -0.0295    0.0 -0.0417 -0.0172   True
+  calbindin_as  calretinin_ss  -0.0393    0.0 -0.0628 -0.0157   True
+  calbindin_as parvalbumin_as   -0.035    0.0 -0.0444 -0.0256   True
+  calbindin_as parvalbumin_ss  -0.0375    0.0 -0.0509  -0.024   True
+  calbindin_ss  calretinin_as    0.008 0.8121 -0.0102  0.0261  False
+  calbindin_ss  calretinin_ss  -0.0018    1.0  -0.029  0.0253  False
+  calbindin_ss parvalbumin_as   0.0024 0.9983  -0.014  0.0188  False
+  calbindin_ss parvalbumin_ss     -0.0    1.0  -0.019   0.019  False
+ calretinin_as  calretinin_ss  -0.0098 0.8484 -0.0336   0.014  False
+ calretinin_as parvalbumin_as  -0.0055 0.6145 -0.0156  0.0045  False
+ calretinin_as parvalbumin_ss   -0.008 0.5681 -0.0219  0.0059  False
+ calretinin_ss parvalbumin_as   0.0043 0.9944 -0.0182  0.0267  False
+ calretinin_ss parvalbumin_ss   0.0018 0.9999 -0.0226  0.0262  False
+parvalbumin_as parvalbumin_ss  -0.0025   0.99 -0.0139   0.009  False
+--------------------------------------------------------------------
+```
+
+Synapse Distance from Soma
+
+```
+### Mann-Whitney U Test Results (Within Markers) ###
+
+
+Analyzing marker: calbindin
+Mann-Whitney U Test Results for calbindin: U-statistic = 2126.0000, p-value = 4.6907e-01
+No significant difference found between as and ss for calbindin (p >= 0.05)
+
+Analyzing marker: calretinin
+Mann-Whitney U Test Results for calretinin: U-statistic = 967.0000, p-value = 4.4988e-01
+No significant difference found between as and ss for calretinin (p >= 0.05)
+
+Analyzing marker: parvalbumin
+Mann-Whitney U Test Results for parvalbumin: U-statistic = 18988.0000, p-value = 3.0137e-03
+Significant difference found between as and ss for parvalbumin (p < 0.05)
+
+### Newman-Keuls Test Results (Between Markers) ###
+
+ANOVA Table:
+                sum_sq     df          F        PR(>F)
+group     3.385853e+05    5.0  28.542369  1.423007e-26
+Residual  1.805480e+06  761.0        NaN           NaN
+Significant differences found, performing Newman-Keuls test...
+Multiple Comparison of Means - Tukey HSD, FWER=0.05         
+=====================================================================
+    group1         group2     meandiff p-adj   lower    upper  reject
+---------------------------------------------------------------------
+  calbindin_as   calbindin_ss  -5.2464 0.9941 -32.6246 22.1318  False
+  calbindin_as  calretinin_as -28.0339 0.0003 -46.8113 -9.2565   True
+  calbindin_as  calretinin_ss -30.4082 0.1547 -66.4897  5.6733  False
+  calbindin_as parvalbumin_as  28.6734    0.0  14.2296 43.1173   True
+  calbindin_as parvalbumin_ss  10.0663 0.7295 -10.5353  30.668  False
+  calbindin_ss  calretinin_as -22.7875 0.1809 -50.6566  5.0816  False
+  calbindin_ss  calretinin_ss -25.1618  0.512 -66.7066 16.3831  False
+  calbindin_ss parvalbumin_as  33.9199 0.0018   8.7659 59.0738   True
+  calbindin_ss parvalbumin_ss  15.3128 0.6632 -13.8167 44.4422  False
+ calretinin_as  calretinin_ss  -2.3743    1.0 -38.8297 34.0812  False
+ calretinin_as parvalbumin_as  56.7073    0.0  41.3533 72.0614   True
+ calretinin_as parvalbumin_ss  38.1002    0.0  16.8505   59.35   True
+ calretinin_ss parvalbumin_as  59.0816    0.0  24.6573 93.5059   True
+ calretinin_ss parvalbumin_ss  40.4745 0.0253   3.0468 77.9023   True
+parvalbumin_as parvalbumin_ss -18.6071 0.0302 -36.1452  -1.069   True
+---------------------------------------------------------------------
+```
+
+### Results
+
+**Bouton Surface Area/ Volume ratio**
+
+- *exc. vs. inh.* synapses
+  - Significant difference was revealed only in case of *parvalbumin* dendrites between exc. and inh. synapses.
+- markers:
+  - Significant differences were revealed in all cases comparing the *exc.*  synapses of markers.
+  - No significant differences were revealed comparing the inh. synapses of markers.
+
+**Synapse Surface Area**
+
+- *exc. vs. inh.* synapses
+  - Significant difference was revealed only in case of *calbindin* dendrites.
+- markers:
+  - Significant differences were revealed calbindin vs. other markers comparing the *exc.* synapses of markers.
+  - No significant differences were revealed comparing the inh. synapses of markers.
+
+**Synapse Distance from Soma**
+
+- *exc. vs. inh.* synapses
+  - Significant difference was revealed only in case of *parvalbumin* dendrites.
+- markers:
+  - Significant differences were revealed between all markers comparing the *exc.* synapses of markers.
+  - Significant differences were revealed between *calretinin and parvalbumin* comparing the inh. synapses of markers.
 
 
 
 
 
 
-# Neuron project
 
-dataset: Own dataset, raw data.
-
-https://talapkapetra.github.io/neuron-project/calbindin_neuron_3D.html
 
 ### Dashboard Link : https://app.powerbi.com/groups/me/reports/7c29cebd-036c-4a92-b9f5-1195953f8563/5163fd55600d096d0c28?redirectedFromSignup=1,1&experience=power-bi
 
-## Problem Statement
 
-This dashboard helps 
-
-
-### Steps followed 
-
-- Step 1 : Load data into Power BI Desktop, dataset is a csv file.
-- Step 2 : Open power query editor & in view tab under Data preview section, check "column distribution", "column quality" & "column profile" options.
-- Step 3 : Also since by default, profile will be opened only for 1000 rows so you need to select "column profiling based on entire dataset".
-- Step 4 : It was observed that in none of the columns errors & empty values were present except column named "Arrival Delay".
-- Step 5 : For calculating average delay time, null values were not taken into account as only less than 1% values are null in this column(i.e column named "Arrival Delay") 
-- Step 6 : In the report view, under the view tab, theme was selected.
-- Step 7 : Since the data contains various ratings, thus in order to represent ratings, a new visual was added using the three ellipses in the visualizations pane in report view. 
-- Step 8 : Visual filters (Slicers) were added for four fields named "Class", "Customer Type", "Gate Location" & "Type of travel".
-- Step 9 : Two card visuals were added to the canvas, one representing average departure delay in minutes & other representing average arrival delay in minutes.
-           Using visual level filter from the filters pane, basic filtering was used & null values were unselected for consideration into average calculation.
-           
-           Although, by default, while calculating average, blank values are ignored.
-- Step 10 : A bar chart was also added to the report design area representing the number of satisfied & neutral/unsatisfied customers. While creating this visual, field named "Gender" was also added to the Legends bucket, thus number of customers are also seggregated according the gender. 
-- Step 11 : Ratings Visual was used to represent different ratings mentioned below,
-
-  (a) Baggage Handling
-
-  (b) Check-in Services
-  
-  (c) Cleanliness
-  
-  (d) Ease of online booking
-  
-  (e) Food & Drink
-  
-  (f) In-flight Entertainment
-
-  (g) In-flight Service
-  
-  (h) In-flight wifi service
-  
-  (i) Leg Room service
-  
-  (j) On-board service
-  
-  (k) Online boarding
-  
-  (l) Seat comfort
-  
-  (m) Departure & arrival time convenience
-  
-In our dataset, Some parameters were assigned value 0, representing those parameters are not applicable for some customers.
-
-All these values have been ignored while calculating average rating for each of the parameters mentioned above.
-
-- Step 12 : In the report view, under the insert tab, two text boxes were added to the canvas, in one of them name of the airlines was mentioned & in the other one company's tagline was written.
-- Step 13 : In the report view, under the insert tab, using shapes option from elements group a rectangle was inserted & similarly using image option company's logo was added to the report design area. 
-- Step 14 : Calculated column was created in which, customers were grouped into various age groups.
-
-for creating new column following DAX expression was written;
-       
-        Age Group = 
-        
-        if(airline_passenger_satisfaction[Age]<=25, "0-25 (25 included)",
-        
-        if(airline_passenger_satisfaction[Age]<=50, "25-50 (50 included)",
-        
-        if(airline_passenger_satisfaction[Age]<=75, "50-75 (75 included)",
-        
-        "75-100 (100 included)")))
-        
-Snap of new calculated column ,
-
-![Snap_1](https://user-images.githubusercontent.com/102996550/174089602-ab834a6b-62ce-4b62-8922-a1d241ec240e.jpg)
-
-        
-- Step 15 : New measure was created to find total count of customers.
-
-Following DAX expression was written for the same,
-        
-        Count of Customers = COUNT(airline_passenger_satisfaction[ID])
-        
-A card visual was used to represent count of customers.
-
-![Snap_Count](https://user-images.githubusercontent.com/102996550/174090154-424dc1a4-3ff7-41f8-9617-17a2fb205825.jpg)
-
-        
- - Step 16 : New measure was created to find  % of customers,
- 
- Following DAX expression was written to find % of customers,
- 
-         % Customers = (DIVIDE(airline_passenger_satisfaction[Count of Customers], 129880)*100)
- 
- A card visual was used to represent this perecntage.
- 
- Snap of % of customers who preferred business class
- 
- ![Snap_Percentage](https://user-images.githubusercontent.com/102996550/174090653-da02feb4-4775-4a95-affb-a211ca985d07.jpg)
-
- 
- - Step 17 : New measure was created to calculate total distance travelled by flights & a card visual was used to represent total distance.
- 
  Following DAX expression was written to find total distance,
  
          Total Distance Travelled = SUM(airline_passenger_satisfaction[Flight Distance])
@@ -457,12 +556,6 @@ A card visual was used to represent count of customers.
  A card visual was used to represent this total distance.
  
  
- ![Snap_3](https://user-images.githubusercontent.com/102996550/174091618-bf770d6c-34c6-44d4-9f5e-49583a6d5f68.jpg)
- 
- - Step 18 : The report was then published to Power BI Service.
- 
- 
-![Publish_Message](https://user-images.githubusercontent.com/102996550/174094520-3a845196-97e6-4d44-8760-34a64abc3e77.jpg)
 
 # Report Snapshot I (Power BI DESKTOP)
 
@@ -483,92 +576,3 @@ A card visual was used to represent count of customers.
 
 A single page report was created on Power BI Desktop & it was then published to Power BI Service.
 
-Following inferences can be drawn from the dashboard;
-
-### [1] Total Number of Customers = 129880
-
-   Number of satisfied Customers (Male) = 28159 (21.68 %)
-
-   Number of satisfied Customers (Female) = 28269 (21.76 %)
-
-   Number of neutral/unsatisfied customers (Male) = 35822 (27.58 %)
-
-   Number of neutral/unsatisfied customers (Female) = 37630 (28.97 %)
-
-
-           thus, higher number of customers are neutral/unsatisfied.
-           
-### [2] Average Ratings
-
-    a) Baggage Handling - 3.63/5
-    b) Check-in Service - 3.31/5
-    c) Cleanliness - 3.29/5
-    d) Ease of online booking - 2.88/5
-    e) Food & Drink - 3.21/5
-    f) In-flight Entertainment - 3.36/5
-    g) In-flight service - 3.64/5
-    h) In-flight Wifi service - 2.81/5
-    i) Leg room service - 3.37/5
-    j) On-board service - 3.38/5
-    k) Online boarding - 3.33/5
-    l) Seat comfort - 3.44/5
-    m) Departure & arrival convenience - 3.22/5
-  
-  while calculating average rating, null values have been ignored as they were not relevant for some customers. 
-  
-  These ratings will change if different visual filters will be applied.  
-  
-  ### [3] Average Delay 
-  
-      a) Average delay in arrival(minutes) - 15.09
-      b) Average delay in departure(minutes) - 14.71
-Average delay will change if different visual filters will be applied.
-
- ### [4] Some other insights
- 
- ### Class
- 
- 1.1) 47.87 % customers travelled by Business class.
- 
- 1.2) 44.89 % customers travelled by Economy class.
- 
- 1.3) 7.25 % customers travelled by Economy plus class.
- 
-         thus, maximum customers travelled by Business class.
- 
- ### Age Group
- 
- 2.1)  21.69 % customers belong to '0-25' age group.
- 
- 2.2)  52.44 % customers belong to '25-50' age group.
- 
- 2.3)  25.57 % customers belong to '50-75' age group.
- 
- 2.4)  0.31 % customers belong to '75-100' age group.
- 
-         thus, maximum customers belong to '25-50' age group.
-         
-### Customer Type
-
-3.1) 18.31 % customers have customer type 'First time'.
-
-3.2) 81.69 % customers have customer type 'returning'.
-       
-       thus, more customers have customer type 'returning'.
-
-### Type of travel
-
-4.1) 69.06 % customers have travel type 'Business'.
-
-4.2) 30.94 % customers have travel type 'Personal'.
-
-        thus, more customers have travel type 'Business'.
-
-![Publish_Message](https://user-images.githubusercontent.com/102996550/174094520-3a845196-97e6-4d44-8760-34a64abc3e77.jpg)
-
-
-# Insights
-
-A single page report was created on Power BI Desktop & it was then published to Power BI Service.
-
-Following inferences can be drawn from the dashboard;
