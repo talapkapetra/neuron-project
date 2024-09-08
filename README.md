@@ -148,9 +148,10 @@ CB_den1_clean_results_df
 
 - Final cleaned datasets were exported to csv and Python codes of the full process stored:
 
-[CB_den1_vesicle_before_shrink.ipynb](https://talapkapetra.github.io/neuron-project/ CB_den1_vesicle_before_shrink.ipynb)
+[CB_den1_vesicle_before_shrink.ipynb](https://talapkapetra.github.io/neuron-project/CB_den1_vesicle_before_shrink.ipynb)
 
-[CB_den2_vesicle_before_shrink.ipynb](https://talapkapetra.github.io/neuron-project/ CB_den2_vesicle_before_shrink.ipynb)
+[CB_den2_vesicle_before_shrink.ipynb](https://talapkapetra.github.io/neuron-project/CB_den2_vesicle_before_shrink.ipynb)
+
 
 
 
