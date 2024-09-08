@@ -287,7 +287,57 @@ Group 1 vs Group 2 U statistic: 33840.0, p-value: 1.7826284520898987e-06
 
 As a final conclusion, remarkable changes have always been observed in the morphometric parameters of synapses because of compression but significant differences were proved only in vesicle data.
 
-## 
+## Morphometric properties of synapses of calbindin-, calretinin- and parvalbumin-immunopositive neurons
+
+[neuron_dataset_summary_stat.ipynb]( https://talapkapetra.github.io/neuron-project/neuron_dataset_summary_stat.ipynb)
+
+For this analysis, only datasets after compression corrections were used.
+
+### Data Cleaning/ Preparation
+
+- Loading csv files after the first data cleaning step (see above).
+- Adding a new column to all dataframes cover dendrite data for later identification and concatonation of the datasets: marker
+- Creating three new dataframes according to markers: CB_combined, CR_combined, PV_combined
+- Certain columns were organised to dataframes according to the statistic tests
+- Remove duplicated values
+- Remove NaN values
+- Filtering and organising of *as* (excitatory) and *ss* (inhibitory) datasets: full_dataframe_cleaned, full_dataframe_cleaned_as, full_dataframe_cleaned_ss
+
+## Exploratory Data Analysis
+
+**Descriptive statistics**
+
+full_dataset
+
+![full_dataset_descr_stat](https://github.com/user-attachments/assets/297e9989-09f5-4f9e-84e3-d14f927785fb)
+
+as_dataset
+
+![full_dataset_as_descr_stat](https://github.com/user-attachments/assets/23ee5b16-9892-43a4-b131-bf24fe8e6a02)
+
+ss_dataset
+
+![full_dataset_ss_descr_stat](https://github.com/user-attachments/assets/98ffec63-3d6f-4efd-b208-ed040b5d495c)
+
+**Normality test**
+
+Shapiro-Wilk normality test was used to investigate if the datasets are fit to the Gaussian distirbution.
+
+All of the datasets were non-normally distributed (p < 0.05)
+
+full_dataset
+
+![full_dataset_shapiro](https://github.com/user-attachments/assets/44d0f822-65c6-4549-a110-1eddf253a01c)
+
+as_dataset
+
+![full_dataset_as_shapiro](https://github.com/user-attachments/assets/6f16cec3-f958-4cf3-941d-80c5bbe1b719)
+
+ss_dataset
+
+![full_dataset_ss_shapiro](https://github.com/user-attachments/assets/9b372572-457d-47f7-b4c6-79aa7db8cf01)
+
+
 
 
 
