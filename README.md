@@ -214,8 +214,80 @@ Nearest neighbour distance of the vesicles
 
 Note: Boxplots were not made of bouton (surface, volume) and synapse (surface area, distance from soma) datasets, because I have choosen other plotting methods (see later).
 
+### Statistical analysis
 
+Mann-Whitney U test was used for pairweis comparison of data collected before and after the compression correction.
 
+Outliers were removed only in case of vesicle data. 
+ - The main objective of the whole project to get morphometric details of each synapses of the dendrites. Therefore, in case of synapse and bouton data, I always presented all, only those were removed, where the segmentation and 3D reconstruction was not complete for some reasons.
+ - In case of vesicle data, ~10-30 vesicle belonged to one synapse and vesicle dataset was only used for the compression correction statistics. Therefore, here was reasonable to omit outliers before statistics.
+
+bouton
+
+```
+Comparison: CB_den1_before vs. CB_den1_after
+Mann-Whitney U Test for surface_area_micron^2:
+Group 1 vs Group 2 U statistic: 5167.0, p-value: 0.1479307866294479
+
+Mann-Whitney U Test for volume_micron^3:
+Group 1 vs Group 2 U statistic: 4991.0, p-value: 0.06723488871103635
+
+Comparison: CB_den2_before vs. CB_den2_after
+Mann-Whitney U Test for surface_area_micron^2:
+Group 1 vs Group 2 U statistic: 537.0, p-value: 0.2133218503263593
+
+Mann-Whitney U Test for volume_micron^3:
+Group 1 vs Group 2 U statistic: 532.0, p-value: 0.19332882103218263
+```
+
+synapse 
+```
+Comparison: CB_den1_before vs. CB_den1_after
+Mann-Whitney U Test for surface_area_micron^2:
+Group 1 vs Group 2 U statistic: 5597.0, p-value: 0.6096319686688123
+
+Mann-Whitney U Test for distance_from_soma_micron:
+Group 1 vs Group 2 U statistic: 4083.0, p-value: 0.0001405642914087126
+
+Comparison: CB_den2_before vs. CB_den2_after
+Mann-Whitney U Test for surface_area_micron^2:
+Group 1 vs Group 2 U statistic: 598.0, p-value: 0.5771972405902599
+
+Mann-Whitney U Test for distance_from_soma_micron:
+Group 1 vs Group 2 U statistic: 511.0, p-value: 0.12421924078970249
+```
+
+vesicle
+```
+Comparison: CB_den1_before vs. CB_den1_after
+Mann-Whitney U Test for vesicle_area_micron^2:
+Group 1 vs Group 2 U statistic: 230238.5, p-value: 5.665342402761894e-35
+
+Mann-Whitney U Test for form_factor:
+Group 1 vs Group 2 U statistic: 373603.0, p-value: 0.03803398474759792
+
+Mann-Whitney U Test for nearest_neighbour_distance:
+Group 1 vs Group 2 U statistic: 259350.0, p-value: 4.901888398121175e-21
+
+Comparison: CB_den2_before vs. CB_den2_after
+Mann-Whitney U Test for vesicle_area_micron^2:
+Group 1 vs Group 2 U statistic: 29314.0, p-value: 3.5876354225166217e-12
+
+Mann-Whitney U Test for form_factor:
+Group 1 vs Group 2 U statistic: 54348.0, p-value: 3.7272286584063873e-07
+
+Mann-Whitney U Test for nearest_neighbour_distance:
+Group 1 vs Group 2 U statistic: 33840.0, p-value: 1.7826284520898987e-06
+```
+
+### Results
+- synapse: Significant difference was observed only in surface area CB_den1_before vs. CB_den1_after.
+- bouton: No significant differences have been determined.
+- vesicle: Significant differences were observed in all cases regarding the vesicle dataset.
+
+As a final conclusion, remarkable changes have always been observed in the morphometric parameters of synapses because of compression but significant differences were proved only in vesicle data.
+
+## 
 
 
 
