@@ -539,6 +539,64 @@ parvalbumin_as parvalbumin_ss -18.6071 0.0302 -36.1452  -1.069   True
   - Significant differences were revealed between all markers comparing the *exc.* synapses of markers.
   - Significant differences were revealed between *calretinin and parvalbumin* comparing the inh. synapses of markers.
 
+## Database
+
+I created a database with all of the datasets in PostgreSQL system.
+
+[Neuron_dataset_database.sql]( https://talapkapetra.github.io/neuron-project/Neuron_dataset_database.sql)
+
+Part of the codes used to create database and tables for representation:
+
+```sql
+CREATE DATABASE neuron_dataset;
+
+CREATE SCHEMA neuron_dataset;
+
+SET search_path TO neuron_dataset;
+
+-- 1. dendrite_data table
+DROP TABLE neuron_dataset.dendrite_data
+CREATE TABLE neuron_dataset.dendrite_data(
+    dendrite_number VARCHAR (256) PRIMARY KEY,
+    branch_number INT,
+    marker VARCHAR (256),
+    lenght_micron DECIMAL,
+    surface_area_micron2 DECIMAL,
+    as_bouton_number INT,
+    ss_bouton_number INT
+);
+
+-- 2. cb_den1_before_shrink_bouton table
+DROP TABLE neuron_dataset.CB_den1_before_shrink_bouton;
+CREATE TABLE neuron_dataset.CB_den1_before_shrink_bouton(
+    bouton_number VARCHAR (256) PRIMARY KEY,
+    location VARCHAR (256),
+    comment VARCHAR (256),
+    bouton_surface_area_micron2 DECIMAL,
+    bouton_volume_micron3 DECIMAL
+);
+
+-- 3. cb_den1_before_shrink_synapse table
+DROP TABLE neuron_dataset.CB_den1_before_shrink_synapse;
+CREATE TABLE neuron_dataset.CB_den1_before_shrink_synapse(
+    bouton_number VARCHAR (256) PRIMARY KEY,
+    synapse_number VARCHAR (256),
+    synapse_surface_area_micron2 DECIMAL,
+    distance_from_soma_micron DECIMAL,
+    CONSTRAINT fk_CB_den1_before_shrink_bouton FOREIGN KEY (bouton_number) REFERENCES neuron_dataset.CB_den1_before_shrink_bouton(bouton_number) ON DELETE CASCADE
+);
+
+-- 4. cb_den1_before_shrink_vesicle table
+DROP TABLE neuron_dataset.CB_den1_before_shrink_vesicle;
+CREATE TABLE neuron_dataset.CB_den1_before_shrink_vesicle(
+    bouton_number VARCHAR (256) PRIMARY KEY,
+    synapse_type VARCHAR (256),
+    vesicle_area_micron2 DECIMAL,
+    form_factor DECIMAL,
+    nearest_neighbour_distance_micron DECIMAL
+);
+```
+
 
 
 
