@@ -152,6 +152,35 @@ CB_den1_clean_results_df
 
 [CB_den2_vesicle_before_shrink.ipynb](https://talapkapetra.github.io/neuron-project/CB_den2_vesicle_before_shrink.ipynb)
 
+## Compression correction
+
+[neuron_dataset_shrinkage_stat.ipynb]( https://talapkapetra.github.io/neuron-project/neuron_dataset_shrinkage_stat.ipynb)
+
+### Data Cleaning/ Preparation
+
+- Loading csv files after the first data cleaning step (see above).
+- Adding a new column to all dataframes cover dendrite data for later identification and concatonation of the datasets: dendrite_name_compr
+- Creating three new dataframes: bouton_df, synapse_df, vesicle_df
+- Remove duplicated values
+- Remove NaN values
+
+### Exploratory Data Analysis
+
+Descriptive statistics:
+
+bouton_df
+
+![bouton_descr_stats](https://github.com/user-attachments/assets/02edf6c8-2fda-4c43-ba94-ddbfee4c33a3)
+
+synapse_df
+
+![synapse_descr_stats](https://github.com/user-attachments/assets/40f61375-3ccf-491d-8636-076193d554c8)
+
+vesicle_df
+
+![vesicle_descr_stats](https://github.com/user-attachments/assets/3050a1c8-63e5-4be9-b151-2f7be64f4287)
+
+
 
 
 
