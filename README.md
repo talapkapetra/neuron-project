@@ -597,6 +597,61 @@ CREATE TABLE neuron_dataset.CB_den1_before_shrink_vesicle(
 );
 ```
 
+## Data Visualisation in PowerBI
+
+Database in PostgreSQL was connected to PowerBI Desktop where I made a report with three pages to present data analysed in Python.
+
+In case of investigation the effect of compression correction on bouton and synapse morphometry, DAX expressions were written to plot the mean proportion (%) of differences. 
+
+[neuron_project.pbix]( https://talapkapetra.github.io/neuron-project/neuron_project.pbix)
+
+```DAX
+CB den1 Synapse Surface Area Percentage Difference = 
+AVERAGEX(
+    'neuron_dataset cb_den1_after_shrink_synapse',
+    DIVIDE(
+        'neuron_dataset cb_den1_after_shrink_synapse'[synapse_surface_area_micron2] - RELATED('neuron_dataset cb_den1_before_shrink_synapse'[synapse_surface_area_micron2]),
+        RELATED('neuron_dataset cb_den1_before_shrink_synapse'[synapse_surface_area_micron2]),
+        0
+    )
+)
+```
+
+```DAX
+CB den2 Synapse Surface Area Percentage Difference = 
+AVERAGEX(
+    'neuron_dataset cb_den2_after_shrink_synapse',
+    DIVIDE(
+        'neuron_dataset cb_den2_after_shrink_synapse'[synapse_surface_area_micron2] - RELATED('neuron_dataset cb_den2_before_shrink_synapse'[synapse_surface_area_micron2]),
+        RELATED('neuron_dataset cb_den2_before_shrink_synapse'[synapse_surface_area_micron2]),
+        0
+    )
+)
+```
+
+# Report Snapshot I
+
+![snapshot_dashboard_01](https://github.com/user-attachments/assets/c88bbb1a-76c3-4f41-ad29-baf56dd6a361)
+
+# Report Snapshot II
+
+![snapshot_dashboard_02](https://github.com/user-attachments/assets/1898ac8e-d0ee-487d-8474-9b68c19e752e)
+
+# Report Snapshot III
+
+![snapshot_dashboard_03](https://github.com/user-attachments/assets/e37b42b2-a32f-426a-a7d4-f1ce5ceb5e72)
+
+The report was published to Power BI Service.
+
+[PowerBI report](https://app.powerbi.com/groups/me/reports/7c29cebd-036c-4a92-b9f5-1195953f8563/5163fd55600d096d0c28?redirectedFromSignup=1,1&experience=power-bi)
+
+![snapshot_PBI_service](https://github.com/user-attachments/assets/a627fa6a-e7a2-4f9f-91fe-9ce913f6d2c5)
+
+## References
+
+One scientific manuscript was published based on my results and the second one is under the revision process.
+
+[Frontiers manuscript]( https://pubmed.ncbi.nlm.nih.gov/33958990/)
 
 
 
@@ -604,33 +659,6 @@ CREATE TABLE neuron_dataset.CB_den1_before_shrink_vesicle(
 
 
 
-### Dashboard Link : https://app.powerbi.com/groups/me/reports/7c29cebd-036c-4a92-b9f5-1195953f8563/5163fd55600d096d0c28?redirectedFromSignup=1,1&experience=power-bi
 
 
- Following DAX expression was written to find total distance,
- 
-         Total Distance Travelled = SUM(airline_passenger_satisfaction[Flight Distance])
-    
- A card visual was used to represent this total distance.
- 
- 
-
-# Report Snapshot I (Power BI DESKTOP)
-
-![snapshot_dashboard_01](https://github.com/user-attachments/assets/d200d407-7829-463b-b6f5-604ff5957458)
- 
- # Report Snapshot II (Power BI DESKTOP)
-
-![snapshot_dashboard_02](https://github.com/user-attachments/assets/97fd2072-56b8-4ba0-9657-79927c526baa)
-
-# Report Snapshot III (Power BI DESKTOP)
-
-![snapshot_dashboard_03](https://github.com/user-attachments/assets/071bd8cb-5246-4a26-bd8e-35f45e2a5c03)
-
-# Dashboard Snapshot (Power BI Service)
-
-![snapshot_PBI_service](https://github.com/user-attachments/assets/e8b3fee0-ca1a-44e4-a369-3c00d293be53)
-
-
-A single page report was created on Power BI Desktop & it was then published to Power BI Service.
 
