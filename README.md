@@ -69,11 +69,13 @@ I had two excel files:
 
 - neuron_dataset_summary.xlsx
 
-neuron_dataset.ipynb
+( to get the raw dataset please contact me.)
+
+[neuron_dataset.ipynb](https://talapkapetra.github.io/neuron-project/neuron_dataset.ipynb)
 
 ### Transformation of csv files containing vesicle data
 
-neuron_dataset.ipynb
+[neuron_dataset.ipynb](https://talapkapetra.github.io/neuron-project/neuron_dataset.ipynb)
 
 Identification of boutons: b1, b2, b3…
 
@@ -146,9 +148,9 @@ CB_den1_clean_results_df
 
 - Final cleaned datasets were exported to csv and Python codes of the full process stored:
 
-CB_den1_vesicle_before_shrink.ipynb
+[CB_den1_vesicle_before_shrink.ipynb](https://talapkapetra.github.io/neuron-project/ CB_den1_vesicle_before_shrink.ipynb)
 
-CB_den1_vesicle_before_shrink.ipynb
+[CB_den2_vesicle_before_shrink.ipynb](https://talapkapetra.github.io/neuron-project/ CB_den2_vesicle_before_shrink.ipynb)
 
 
 
