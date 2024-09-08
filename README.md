@@ -60,9 +60,9 @@ Representative image of all dendrites.**
 
 https://talapkapetra.github.io/neuron-project/calbindin_neuron_3D.html
 
-# Data Preparation
+## Data Preparation
 
-## Preparation of csv files
+### Preparation of csv files
 
 I had two excel files:
 -  neuron_dataset_shrinkage.xlsx
@@ -71,7 +71,7 @@ I had two excel files:
 
 neuron_dataset.ipynb
 
-## Transformation of csv files containing vesicle data
+### Transformation of csv files containing vesicle data
 
 neuron_dataset.ipynb
 
@@ -79,7 +79,7 @@ Identification of boutons: b1, b2, b3…
 
 However, in case of vesicle datasets, one bouton had 10-30 data (rows). Therefore I had to introduce a new, unique labelling for each vesicles: b1_1, b1_2, b1_3, b2_1, b2_2…
 
-## Transformation CB_den1 and CB_den2 before vesicle csv files and calculation to determine the nearest neighbour distance
+### Transformation CB_den1 and CB_den2 before vesicle csv files and calculation to determine the nearest neighbour distance
 
 For the statistical analysis of the effects of compression correction I needed data not only after but also before performing the compression corrections.
 
