@@ -303,7 +303,7 @@ For this analysis, only datasets after compression corrections were used.
 - Remove NaN values
 - Filtering and organising of *as* (excitatory) and *ss* (inhibitory) datasets: full_dataframe_cleaned, full_dataframe_cleaned_as, full_dataframe_cleaned_ss
 
-## Exploratory Data Analysis
+### Exploratory Data Analysis
 
 **Descriptive statistics**
 
@@ -366,7 +366,7 @@ ss_dataset
 
 ![synapse_ss_histoplot](https://github.com/user-attachments/assets/7e6fdaa3-0d28-4be1-ac6a-9a0918947259)
 
-## Statistical anaylsis
+### Statistical analysis
 
 Mann-Whitney U test was performed to compare *as vs. ss* data.
 
@@ -629,15 +629,15 @@ AVERAGEX(
 )
 ```
 
-# Report Snapshot I
+### Report Snapshot I
 
 ![snapshot_dashboard_01](https://github.com/user-attachments/assets/c88bbb1a-76c3-4f41-ad29-baf56dd6a361)
 
-# Report Snapshot II
+### Report Snapshot II
 
 ![snapshot_dashboard_02](https://github.com/user-attachments/assets/1898ac8e-d0ee-487d-8474-9b68c19e752e)
 
-# Report Snapshot III
+### Report Snapshot III
 
 ![snapshot_dashboard_03](https://github.com/user-attachments/assets/e37b42b2-a32f-426a-a7d4-f1ce5ceb5e72)
 
