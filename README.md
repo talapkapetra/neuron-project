@@ -166,7 +166,7 @@ CB_den1_clean_results_df
 
 ### Exploratory Data Analysis
 
-Descriptive statistics:
+**Descriptive statistics**
 
 bouton_df
 
@@ -179,6 +179,26 @@ synapse_df
 vesicle_df
 
 ![vesicle_descr_stats](https://github.com/user-attachments/assets/3050a1c8-63e5-4be9-b151-2f7be64f4287)
+
+**Normality test**
+
+Shapiro-Wilk normality test was used to investigate if the datasets are fit to the Gaussian distirbution.
+
+- Outliers were removed only in case of vesicle data. 
+  - The main objective of the whole project to get moprhometric details of each synapses of the dendrites. Therefore, in case of synapse and bouton data, I always presented all, only those were those removed, where the segmentation and 3D reconstruction was not complete for some reasons.
+  - In case of vesicle data, ~10-30 vesicle belonged to one synapse and vesicle dataset was only used for the compression correction statistics. Therefore, here was reasonable to omit outliers before statistics.
+
+bouton_df
+
+![bouton_shapiro](https://github.com/user-attachments/assets/30aa3204-b2a0-4d13-8d63-7329a7447abe)
+
+synapse_df
+
+![synapse_shapiro](https://github.com/user-attachments/assets/0d103795-11ab-4770-bdcf-8dc227869db1)
+
+vesicle_df
+
+![vesicle_shapiro](https://github.com/user-attachments/assets/cdf1447e-5d8e-406c-b99f-a74845040515)
 
 
 
