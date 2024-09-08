@@ -69,7 +69,7 @@ I had two excel files:
 
 - neuron_dataset_summary.xlsx
 
-( to get the raw dataset please contact me.)
+( For the raw dataset please contact me.)
 
 [neuron_dataset.ipynb](https://talapkapetra.github.io/neuron-project/neuron_dataset.ipynb)
 
@@ -184,9 +184,7 @@ vesicle_df
 
 Shapiro-Wilk normality test was used to investigate if the datasets are fit to the Gaussian distirbution.
 
-- Outliers were removed only in case of vesicle data. 
-  - The main objective of the whole project to get morphometric details of each synapses of the dendrites. Therefore, in case of synapse and bouton data, I always presented all, only those were removed, where the segmentation and 3D reconstruction was not complete for some reasons.
-  - In case of vesicle data, ~10-30 vesicle belonged to one synapse and vesicle dataset was only used for the compression correction statistics. Therefore, here was reasonable to omit outliers before statistics.
+All of the datasets were non-normally distributed (p < 0.05)
 
 bouton_df
 
@@ -200,6 +198,21 @@ vesicle_df
 
 ![vesicle_shapiro](https://github.com/user-attachments/assets/cdf1447e-5d8e-406c-b99f-a74845040515)
 
+**Boxplots**
+
+Vesicle area 
+
+![vesicle_area_boxplot](https://github.com/user-attachments/assets/e34be1ff-b790-40f8-be21-cbf3a8b6d212)
+
+Vesicle form factor
+
+![form_factor](https://github.com/user-attachments/assets/48d34f59-b434-4187-bbc5-d005aa9b9d8b)
+
+Nearest neighbour distance of the vesicles
+
+![nearest_neighbour_distance](https://github.com/user-attachments/assets/0bc34abd-fefe-40db-a8d5-0322f4fb4de7)
+
+Note: Boxplots were not made of bouton (surface, volume) and synapse (surface area, distance from soma) datasets, because I have choosen other plotting methods (see later).
 
 
 
