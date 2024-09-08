@@ -185,7 +185,7 @@ vesicle_df
 Shapiro-Wilk normality test was used to investigate if the datasets are fit to the Gaussian distirbution.
 
 - Outliers were removed only in case of vesicle data. 
-  - The main objective of the whole project to get moprhometric details of each synapses of the dendrites. Therefore, in case of synapse and bouton data, I always presented all, only those were those removed, where the segmentation and 3D reconstruction was not complete for some reasons.
+  - The main objective of the whole project to get morphometric details of each synapses of the dendrites. Therefore, in case of synapse and bouton data, I always presented all, only those were removed, where the segmentation and 3D reconstruction was not complete for some reasons.
   - In case of vesicle data, ~10-30 vesicle belonged to one synapse and vesicle dataset was only used for the compression correction statistics. Therefore, here was reasonable to omit outliers before statistics.
 
 bouton_df
