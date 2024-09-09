@@ -10,6 +10,9 @@
 - [Data Preparation](#data-preparation)
 - [Compression Correction](#compression-correction)
 - [Morphometric Properties of Synapses of Calbindin-, Calretinin- and Parvalbumin-Immunopositive Neurons](#morphometric-properties-of-synapses-of-calbindin--calretinin--and-parvalbumin-immunopositive-neurons)
+- [Database](#database)
+- [Data Visualisation in PowerBI](#data-visualisation-in-powerbi)
+- [References](#references)
 
 ## Project Overview
 
