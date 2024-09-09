@@ -28,7 +28,7 @@ We utilized these softwares to gain morphometric features of the terminals and s
  - Statistical analysis of the effect of compression which could be observed due to the ultrathin sectioning. 
  - Statistical analysis of the morphometric synaptic features. Are there any differences between markers as well as different synapse types (excitatory vs. inhibitory)?
 
-## Tools:
+## Tools
  - Excel: organizing and collecting of datasets
  - Python, PyCharm: data cleaning, data preparation, exploratory data analysis, statistics
  - PostgreSQL, DataGrip: creating database
