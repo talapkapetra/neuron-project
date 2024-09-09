@@ -49,7 +49,7 @@ These TEM images were used to collect vesicle data: area, form factor, nearest n
 ![EM_figure](https://github.com/user-attachments/assets/b6cd1fe4-ab25-4b15-90b4-bfc351a43e8c)
 
 The contour of vesicles located less than 50 nm from the active zones (~ surface of the chemical synaptic connections) were drawn using Neurolucida reconstruction system. That meant to be measured  approximately 10-30 vesicles / synapse. 
-In general, excitatory (asymmetric) synapses have vesicles approaching the regular circle, while inhibitory (symmetric) synapse vesicles are oval. *Exc.* vesicles located closer to each other than *inh.* vesicles. Therefore statistical analysis and comparison of the morphometric properties of the vesciles like area, form factor and nearest neighbour distance help in the characterization of synapses.
+In general, excitatory (asymmetric) synapses have vesicles approaching the regular circle, while inhibitory (symmetric) synapse vesicles are oval. *Exc.* vesicles located closer to each other than *inh.* vesicles. Therefore statistical analysis and comparison of the morphometric properties of the vesicles like area, form factor and nearest neighbour distance help in the characterization of synapses.
 
 **3. I used Blender for final smoothing and editing the 3D reconstruction of the dendrites.
 Representative image of all dendrites.**
