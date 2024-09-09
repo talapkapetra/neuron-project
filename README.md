@@ -89,9 +89,9 @@ When I got the dataset, I realised, that nearest neighbour distance calculations
 
 - remove of NaN values
 - *X, Y and Z coordinates* : I transformed the numbers (string format, points etc.) and removed Z coordinates. Since measurements were made on images (on the 2D pane), Z value was always 0.
-- I created two new columns for the X and Y corrdinates (x_coord, y_coord)
+- I created two new columns for the X and Y coordinates (x_coord, y_coord)
 - Nearest neighbour distance measurement was performed in two steps in case of each vesicles:
-   - Firstly, *Manhattan distance* was calculated to determine which point is the closest to the current   point within the vesicle group of one synapse. Manhattan distance is simpler and computationally less expensive to calculate.
+   - Firstly, *Manhattan distance* was calculated to determine which point is the closest to the current point within the vesicle group of one synapse. Manhattan distance is simpler and computationally less expensive to calculate.
    - Afterwards, *Euclidean Distance* was calculated to measure the actual spatial distance between the current point and the closest point. Euclidean distance provides a precise measure of the straight-line distance in 2D space.
 
 ```python
@@ -142,7 +142,7 @@ CB_den1_clean_results_df
 
 - euclidean_distance column: contain data in micron
 
-- euclidean_distance_corr_nanometer column: I multipled the values in *euclidean_distance column* by 10. During the measurements in Neurolucida, original images were multipled with 100 beacause software could not handle datasets in the nanometer level. Therefore at this data processing step only multiple by 10 was needed for exchanging the values to the final nanometer.
+- euclidean_distance_corr_nanometer column: I multipled the values in *euclidean_distance column* by 10. During the measurements in Neurolucida, original images were multipled with 100 because software could not handle datasets in the nanometer level. Therefore at this data processing step only multiple by 10 was needed for exchanging the values to the final nanometer.
 
 - Finally, I checked duplicates and transferred numeric data to float64 format.
 
@@ -182,7 +182,7 @@ vesicle_df
 
 **Normality test**
 
-Shapiro-Wilk normality test was used to investigate if the datasets are fit to the Gaussian distirbution.
+Shapiro-Wilk normality test was used to investigate if the datasets are fit to the Gaussian distribution.
 
 All of the datasets were non-normally distributed (p < 0.05)
 
@@ -219,8 +219,8 @@ Note: Boxplots were not made of bouton (surface, volume) and synapse (surface ar
 Mann-Whitney U test was used for pairweis comparison of data collected before and after the compression correction.
 
 Outliers were removed only in case of vesicle data. 
- - The main objective of the whole project to get morphometric details of each synapses of the dendrites. Therefore, in case of synapse and bouton data, I always presented all, only those were removed, where the segmentation and 3D reconstruction was not complete for some reasons.
- - In case of vesicle data, ~10-30 vesicle belonged to one synapse and vesicle dataset was only used for the compression correction statistics. Therefore, here was reasonable to omit outliers before statistics.
+ - The main objective of the whole project was to get morphometric details of each synapses of the dendrites. Therefore, in case of synapse and bouton data, I always presented all, only those were removed, where the segmentation and 3D reconstruction was not complete for some reasons.
+ - In case of vesicle data, ~10-30 vesicles belonged to one synapse and vesicle dataset was only used for the compression correction statistics. Therefore, here was reasonable to omit outliers before statistics.
 
 bouton
 
@@ -371,7 +371,7 @@ ss_dataset
 
 Mann-Whitney U test was performed to compare *as vs. ss* data.
 
-Newmanm-Keuls test (with Tukey) was performed to make pairweis comparisons between markers.
+Newmanm-Keuls test (with Tukey) was performed to make pairweis comparisons between *markers*.
 
 Bouton Surface area / Volume ratio
 
@@ -521,7 +521,7 @@ parvalbumin_as parvalbumin_ss -18.6071 0.0302 -36.1452  -1.069   True
 - *exc. vs. inh.* synapses
   - Significant difference was revealed only in case of *parvalbumin* dendrites between exc. and inh. synapses.
 - markers:
-  - Significant differences were revealed in all cases comparing the *exc.*  synapses of markers.
+  - Significant differences were revealed in all cases comparing the *exc.* synapses of markers.
   - No significant differences were revealed comparing the inh. synapses of markers.
 
 **Synapse Surface Area**
@@ -529,7 +529,7 @@ parvalbumin_as parvalbumin_ss -18.6071 0.0302 -36.1452  -1.069   True
 - *exc. vs. inh.* synapses
   - Significant difference was revealed only in case of *calbindin* dendrites.
 - markers:
-  - Significant differences were revealed calbindin vs. other markers comparing the *exc.* synapses of markers.
+  - Significant differences were revealed *calbindin vs. other markers* comparing the *exc.* synapses of markers.
   - No significant differences were revealed comparing the inh. synapses of markers.
 
 **Synapse Distance from Soma**
