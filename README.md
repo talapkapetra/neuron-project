@@ -56,7 +56,7 @@ Representative image of all dendrites.**
 
 ![3D_Blender_figure](https://github.com/user-attachments/assets/ad6d6c1f-5086-404c-a738-0185198f4e57)
 
-**4. Movie of one calbindin-positive neuron and their two dendrites (den1 and den2)**
+**4. Movie of one calbindin-positive neuron and their two dendrites (den1 and den2).**
 
 https://talapkapetra.github.io/neuron-project/calbindin_neuron_3D.html
 
