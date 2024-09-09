@@ -12,7 +12,7 @@ We utilized these softwares to gain morphometric features of the terminals and s
 
  - Organizing of the huge datasets and create a database which can be integrated into international storage systems.
  - Statistical analysis of the effect of compression which could be observed due to the ultrathin sectioning. 
- - Statistical analysis of the morphometric synaptic features. Are there any differences between markers as well as different synapse types (excitatory vs. inhibitory)
+ - Statistical analysis of the morphometric synaptic features. Are there any differences between markers as well as different synapse types (excitatory vs. inhibitory)?
 
 ## Tools:
  - Excel: organizing and collecting of datasets
