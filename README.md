@@ -88,7 +88,7 @@ For the statistical analysis of the effects of compression correction I needed d
 When I got the dataset, I realised, that nearest neighbour distance calculations were missing for CB_den1 and CB_den2 before corrections. (For other groups, data were available in the excel files.) I figured out that my collegue made the calculation in excel with a formula counting the Manhattan and Euclidean distance for each vesciles. But it was not added to the excel files.
 
 - remove of NaN values
-- *X and Y and Z coordinates* : I transformed the numbers (string format, points etc.) and removed Z coordinates. Since measurements were made on images (on the 2D pane), Z value was always 0.
+- *X, Y and Z coordinates* : I transformed the numbers (string format, points etc.) and removed Z coordinates. Since measurements were made on images (on the 2D pane), Z value was always 0.
 - I created two new columns for the X and Y corrdinates (x_coord, y_coord)
 - Nearest neighbour distance measurement was performed in two steps in case of each vesicles:
    - Firstly, *Manhattan distance* was calculated to determine which point is the closest to the current   point within the vesicle group of one synapse. Manhattan distance is simpler and computationally less expensive to calculate.
