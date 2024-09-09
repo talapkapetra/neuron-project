@@ -1,5 +1,16 @@
 #  Neuron Data Science Project
 
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Objectives](#objectives)
+- [Tools](#tools)
+- [Abbreviations](#abbreviations)
+- [Supplementary Information](#supplementary-information)
+- [Data Preparation](#data-preparation)
+- [Compression Correction](#compression-correction)
+- [Morphometric Properties of Synapses of Calbindin-, Calretinin- and Parvalbumin-Immunopositive Neurons](#morphometric-properties-of-synapses-of-calbindin--calretinin--and-parvalbumin-immunopositive-neurons)
+
 ## Project Overview
 
 For this neuroscience project I used my own dataset. Our aim was the complete morphometric analysis of dendrites and synapses of inhibitory neurons (mouse visual cortex). The neurons were identified by immunohistochemistry using markers of different types of calcium-binding proteins they contain (calbindin, calretinin, parvalbumin). The data collected from volume electron microscopy. 
