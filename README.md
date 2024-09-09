@@ -36,7 +36,7 @@ We utilized these softwares to gain morphometric features of the terminals and s
 ## Supplementary information
 I attached some representative figures and movie to make easier the overview of the project.
 
-**1. Representative image made by a light microscope with three calbindin positive neurons**
+**1. Representative image made by a light microscope with three calbindin positive neurons.**
 
 ![LM_image_small](https://github.com/user-attachments/assets/fdc2f33e-2f98-416f-b242-6600e5a4216e)
 
